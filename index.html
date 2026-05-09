@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>查询页面</title>
+</head>
+<body>
+  <p>参数获取成功，复制后面编码即可：<span id="code"></span></p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    document.getElementById('code').textContent = params.get('k') || '无参数';
+  </script>
+</body>
+</html>
